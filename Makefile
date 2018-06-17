@@ -13,5 +13,8 @@ default:
 run: $(TARGET)
 	./$<
 
+clean:
+	rm -f *.o $(TARGET)
+
 $(TARGET): $(OBJS)
 	$(CXX) -o $@ $^ $(LDFLAGS)
